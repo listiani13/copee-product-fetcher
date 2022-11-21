@@ -99,6 +99,8 @@ export async function storeProductsToCsvFile(shopId: number, fileName: string) {
 			shopid,
 			itemid,
 			tier_variations,
+			sold,
+			historical_sold,
 		}) => ({
 			name: `"${name}"`,
 			is_discount: price_before_discount !== price,
@@ -117,6 +119,8 @@ export async function storeProductsToCsvFile(shopId: number, fileName: string) {
 			price_min: formatShopeePrice(price_min),
 			price_max_before_discount: formatShopeePrice(price_max_before_discount),
 			price_min_before_discount: formatShopeePrice(price_min_before_discount),
+			sold,
+			historical_sold,
 			tier_variations: `"${tier_variations.join(",")}"`,
 		})
 	);
