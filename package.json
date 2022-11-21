@@ -5,8 +5,8 @@
 	},
 	"version": "1.0.0",
 	"description": "CLI to fetch products from Shopee's API",
-	"main": "index.js",
 	"author": "Listiani <listiliz13@gmail.com>",
+	"homepage": "https://github.com/listiani13/copee-product-fetcher/#readme",
 	"scripts": {
 		"build": "tsc"
 	},
