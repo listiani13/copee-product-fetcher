@@ -4,3 +4,8 @@ yarn-error.log
 
 # build file
 dist
+
+.DS_Store
+
+# ignore any generated files
+*.csv
