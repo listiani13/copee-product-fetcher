@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 import { Command } from "commander";
 import { storeProductsToCsvFile } from "./getProducts";
 
@@ -5,7 +6,7 @@ const program = new Command();
 
 program
 	// TODO: Get from package.json
-	.version("1.0.0")
+	.version("1.0.3")
 	.description("CLI to get list of products from store in Shopee")
 	.argument("<shopId>", "Shopee's Shop ID")
 	.argument("<fileName>", "Name of output file")

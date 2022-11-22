@@ -127,7 +127,7 @@ export async function storeProductsToCsvFile(shopId: number, fileName: string) {
 
 	const json2csvParser = new Parser();
 	const csv = json2csvParser.parse(productItems);
-	const path = __dirname + `/${fileName}.csv`;
+	const path = `./${fileName}.csv`;
 	console.log("Writing result to CSV");
 	await fs.writeFile(path, csv, (err) => {
 		if (err) {

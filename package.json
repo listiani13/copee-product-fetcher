@@ -3,7 +3,7 @@
 	"bin": {
 		"copeefetcher": "./dist/index.js"
 	},
-	"version": "1.0.0",
+	"version": "1.0.3",
 	"description": "CLI to fetch products from Shopee's API",
 	"author": "Listiani <listiliz13@gmail.com>",
 	"homepage": "https://github.com/listiani13/copee-product-fetcher/#readme",
