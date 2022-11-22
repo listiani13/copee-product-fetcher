@@ -2,6 +2,8 @@ import { sampleData } from "./fixtures/products";
 import { Parser } from "json2csv";
 import * as fs from "fs";
 import fetch from "node-fetch";
+import process from "process";
+import path from "path";
 
 type BuildShopDetailsUrlParam = {
 	limit: number;
@@ -127,13 +129,14 @@ export async function storeProductsToCsvFile(shopId: number, fileName: string) {
 
 	const json2csvParser = new Parser();
 	const csv = json2csvParser.parse(productItems);
-	const path = `./${fileName}.csv`;
+	const currentWorkingDirectory = process.cwd();
+	const cwdPath = path.join(currentWorkingDirectory, `${fileName}.csv`);
 	console.log("Writing result to CSV");
-	await fs.writeFile(path, csv, (err) => {
+	await fs.writeFile(cwdPath, csv, (err) => {
 		if (err) {
 			console.error("Error occured while writing the file", err);
 		} else {
-			console.log("Finish writing result to", path);
+			console.log("Finish writing result to", cwdPath);
 		}
 	});
 }
